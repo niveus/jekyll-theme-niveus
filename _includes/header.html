@@ -1,0 +1,16 @@
+<header class="site-header" role="banner">
+  <div class="wrapper">
+    {% assign default_paths = site.pages | map: "path" %}
+    {% assign page_paths = site.header_pages | default: default_paths %}
+    <a class="site-title" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+  
+    <form action="https://google.com/search" method="get" class="site-search">
+      <fieldset role="search">
+        <input type="hidden" name="q" value="site:{{ site.url }}" />
+        <input class="search" type="text" name="q" placeholder="Search"/>
+      </fieldset>
+    </form>
+    
+    {% include sitenav.html %}
+  </div>
+</header>

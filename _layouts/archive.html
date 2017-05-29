@@ -1,0 +1,36 @@
+---
+layout: default
+---
+<div class="archive">
+  <h1>{{ page.title }}</h1>
+  <ul class="post-list">
+    {% for post in page.posts %}
+      <li>
+        <h2><a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+        
+        {% assign date_format = site.jekyll-theme-niveus.date_format | default: "%B %-d, %Y" %}
+        <span class="post-meta">{{ post.date | date: date_format }}</span>
+        
+        {{ post.excerpt }}
+        
+        <a href="{{ post.url | relative_url }}" class="read-more">Continued...</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="previous">← Older</a>
+  {% else %}
+    <span class="empty"></span>
+  {% endif %}
+  
+  <a href="/archives.html" class="archives-link">Blog Archives</a>
+  
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="next">Newer →</a>
+  {% else %}
+    <span class="empty"></span>
+  {% endif %}
+</div>
