@@ -1,6 +1,4 @@
-/**
- * Site header
- */
+// Site header
 .site-header {
   border-bottom: 1px solid $grey-color-light;
   min-height: $spacing-unit * 1.865;
@@ -47,9 +45,10 @@
       border: 1px solid $grey-color-light;
       padding: 0.5em 0.6em;
       width: 16em;
+      -webkit-appearance: none;
       
       @include media-query($phone) {
-        width: auto;
+        width: 95%;
       }
     }
   }
@@ -73,9 +72,7 @@
   }
 }
 
-/**
- * Pagination
- */
+// Pagination
 .pagination {
   display: table;
   width: 100%;
@@ -110,9 +107,7 @@
   }
 }
 
-/**
- * Site footer
- */
+// Site footer
 .site-footer {
   padding: ($spacing-unit/2) 0 $spacing-unit;
   text-align: center;
@@ -123,15 +118,13 @@
     color: $grey-color-link;
     
     + a::before {
-      content: '|';
+      content: '·';
       padding: 0.4em;
     }
   }
 }
 
-/**
- * Page content
- */
+// Page content
 .page-content {
   padding: $spacing-unit 0 0;
   
@@ -218,9 +211,7 @@
   font-style: italic;
 }
 
-/**
- * Posts
- */
+// Posts
 .post-header {
   margin-bottom: $spacing-unit;
   
@@ -258,17 +249,16 @@
   
   @include media-query($phone) {
     margin-bottom: ($spacing-unit/3);
-    @include relative-font-size(0.8);
   }
   
   // Lone images
-  p img:first-child:last-child, iframe.youtube {
+  img.photo, iframe.youtube {
     display: block;
     margin: 0 auto;
   }
   
   // Multiple images in a row
-  p > img + img {
+  img.photo + img.photo {
     margin-top: 1em;
   }
   
