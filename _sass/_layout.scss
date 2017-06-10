@@ -232,10 +232,6 @@
   @include media-query($tablet) {
     @include relative-font-size(2);
   }
-  
-  @include media-query($phone) {
-    @include relative-font-size(1.3);
-  }
 }
 
 .post-content {
