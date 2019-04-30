@@ -1,0 +1,114 @@
+@media (prefers-color-scheme: dark) {
+    body {
+        color: $text-color-darkmode;
+        background-color: $background-color-darkmode;
+    }
+    
+    a {
+        color: $brand-color-darkmode;
+    }
+    
+    blockquote {
+        color: $grey-color-lightest-darkmode;
+        border-left-color: $grey-color-darkmode;
+    }
+
+    pre {
+        border-color: $grey-color-light-darkmode;
+        background-color: $grey-color-lightest-darkmode;
+    }
+    
+    // Overrides for rouge highlighter
+    .highlighter-rouge .highlight, .highlight {
+        background-color: $grey-color-darkest-darkmode;
+        border-color: $grey-color-darkmode;
+    }
+    
+    // Site header
+    .site-header {
+        border-bottom-color: $grey-color-light-darkmode;
+    }
+
+    .site-title {
+      &,
+      &:visited {
+        color: $text-color-darkmode;
+      }
+    }
+
+    .site-search {
+      fieldset {
+        .search {
+          color: $text-color-darkmode;
+          border-color: $grey-color-dark-darkmode;
+          background-color: $grey-color-darkest-darkmode;
+        }
+      }
+    }
+
+    .site-nav {
+      .page-link {
+        color: $text-color-darkmode;
+
+        &:hover {
+          color: $grey-color-darkmode;
+        }
+      }
+    }
+
+    // Pagination
+    .pagination {
+      > a, > span.empty {
+        &.archives-link {
+          color: $grey-color-link-darkmode;
+        }
+      }
+    }
+
+    // Site footer
+    .site-footer {
+      color: $grey-color-light-darkmode;
+      
+      a {
+        color: $grey-color-link-darkmode;
+      }
+    }
+
+    .post-meta {
+      color: $grey-color-darkmode;
+    }
+
+    .post-link {
+      &:hover {
+        border-bottom-color: $brand-color-darkmode;
+      }
+    }
+
+    .read-more {
+      color: $grey-color-link-darkmode;
+    }
+
+    .archive {
+      .archive-list {
+        > li {
+          > .archive-year {
+            color: $grey-color-link-darkmode;
+            border-right-color: $grey-color-light-darkmode;
+          }
+          
+          > .archive-month {
+            color: $grey-color-link-darkmode;
+            border-right-color: $grey-color-lightest-darkmode;
+          }
+          
+          > .archive-link {
+            > a {
+              &:hover {
+                border-bottom-color: $brand-color-darkmode;
+              }
+            }
+          }
+        }
+      }
+    }
+}
